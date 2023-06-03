@@ -1,56 +1,79 @@
-# demo-vue-package - 基础页面 - 封装库集合
+# vue-loading-ui 加载中弹窗组件
 
-## 看组件库-看对应分支代码
+## [npm 组件包地址](https://www.npmjs.com/package/vue-loading-ui)
 
-## Project setup
+## 示例
 
-```
-npm install
-```
+![示例](https://img-blog.csdnimg.cn/d9fa51e029dc40a49911194c36c53f9a.gif)
 
-### Compiles and hot-reloads for development
+## 安装
 
 ```
-npm run serve
+npm i vue-loading-ui
 ```
 
-### Compiles and minifies for production
+### 使配置 在 main.js 文件中引入组件和样式
 
 ```
-npm run build
+import Loading from 'vue-loading-ui';
+import 'vue-loading-ui/dist/vue-loading-ui.css';
+Vue.use(Loading, {
+  title: '正在加载...'
+});
 ```
 
-### Lints and fixes files
+### 使用 页面中使用
 
 ```
-npm run lint
+<template>
+  <div class="home">
+    <button @click="show">显示加载</button>
+    <button @click="hidden">关闭加载</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HomeView",
+  methods: {
+    show() {
+      this.$showLoading();
+    },
+    hidden() {
+      this.$hiddenLoading();
+    },
+  },
+};
+</script>
 ```
 
+### 在网络请求中使用加载器 - 案例
+
 ```
-// 登陆
-npm login
-// 发布
-npm publish
+let count = 0
+// 添加请求拦截器
+axios.interceptors.request.use(function (config) {
+    // 在发送请求之前做些什么
+    count++
+    Vue.showLoading()//在插件的index.js中定义的方法 显示插件
+    return config
+}, function (error) {
+    // 对请求错误做些什么
+    Vue.hiddenLoading()//在插件的index.js中定义的方法 隐藏插件
+    return Promise.reject(error)
+})
 
-// 自动更改版本号，并且 commit
-// npm version xxx
-
-// 控制台会返回下一个小版本号 如 v1.0.1
-npm version patch
-
-// 重新发布
-npm publish
-
-// patch：补丁号，修复 bug，小变动，如 v1.0.0->v1.0.1
-npm version patch
-
-// minor：次版本号，增加新功能，如 v1.0.0->v1.1.0
-npm version minor
-
-// major：主版本号，不兼容的修改，如 v1.0.0->v2.0.0
-npm version major
+// 添加响应拦截器
+axios.interceptors.response.use(function (response) {
+    // 对响应数据做点什么
+    count--
+    if (count === 0) {
+        Vue.hiddenLoading()//在插件的index.js中定义的方法 隐藏插件
+    }
+    return response
+}, function (error) {
+    // 对响应错误做点什么
+    Vue.hiddenLoading()//在插件的index.js中定义的方法 隐藏插件
+    return Promise.reject(error)
+})
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
