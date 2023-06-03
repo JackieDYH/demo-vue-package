@@ -1,3 +1,12 @@
+<!--
+ * @Author: Jackie
+ * @Date: 2023-06-03 14:40:12
+ * @LastEditTime: 2023-06-03 14:44:47
+ * @LastEditors: Jackie
+ * @Description: file content
+ * @FilePath: /demo-vue-package/src/App.vue
+ * @version: 
+-->
 <template>
   <div id="app">
     <nav>
