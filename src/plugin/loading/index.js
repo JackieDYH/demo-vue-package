@@ -1,10 +1,10 @@
 /*
  * @Author: Jackie
  * @Date: 2023-06-03 12:51:03
- * @LastEditTime: 2023-06-03 13:05:34
+ * @LastEditTime: 2023-06-03 17:44:02
  * @LastEditors: Jackie
- * @Description: file content
- * @FilePath: /Loading-demo/src/plugin/loading/index.js
+ * @Description: 入口文件
+ * @FilePath: /demo-vue-package/src/plugin/loading/index.js
  * @version: 
  */
 import Loading from './Loading.vue';
