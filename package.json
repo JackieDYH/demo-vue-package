@@ -1,11 +1,28 @@
 {
-  "name": "demo",
+  "name": "auto-update-html",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/auto-update-html.umd.min.js",
+  "keywords": [
+    "update",
+    "html",
+    "auto-update"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackieDYH/demo-vue-package"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "JackieDYH",
+    "github": "https://github.com/JackieDYH"
+  },
+  "description": "这是一个自动检测页面是否更新，提示用户刷新页面的插件",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib ./src/plugin/auto-update/index.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
