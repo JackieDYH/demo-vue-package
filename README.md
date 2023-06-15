@@ -1,6 +1,6 @@
-# vue-circle-progress-bar 环形进度条组件
+# vue2-circular-progress-bar 环形进度条组件
 
-## [npm 组件包地址](https://www.npmjs.com/package/vue-circle-progress-bar)
+## [npm 组件包地址](https://www.npmjs.com/package/vue2-circle-progress-bar)
 
 ## 示例
 
@@ -9,7 +9,7 @@
 ## 安装
 
 ```
-npm i vue-circle-progress-bar
+npm i vue2-circle-progress-bar
 ```
 
 ### 使配置 在 对应的 vue 文件中引入组件和样式
@@ -21,8 +21,8 @@ npm i vue-circle-progress-bar
   </div>
 </template>
 <script>
-import ProgressBar from 'vue-circle-progress-bar';
-import 'vue-circle-progress-bar/dist/vue-circle-progress-bar.css';
+import ProgressBar from 'vue2-circle-progress-bar';
+import 'vue2-circle-progress-bar/dist/vue2-circle-progress-bar.css';
 export default {
   name: "HomeView",
   components: {

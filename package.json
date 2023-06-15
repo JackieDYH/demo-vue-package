@@ -1,8 +1,8 @@
 {
-  "name": "vue-circle-progress-bar",
+  "name": "vue2-circle-progress-bar",
   "version": "0.1.0",
   "private": false,
-  "main": "dist/vue-circle-progress-bar.umd.min.js",
+  "main": "dist/vue2-circle-progress-bar.umd.min.js",
   "keywords": [
     "circle",
     "progress",
