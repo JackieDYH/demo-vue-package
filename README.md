@@ -1,56 +1,38 @@
-# demo-vue-package - 基础页面 - 封装库集合
+# vue-circle-progress-bar 环形进度条组件
 
-## 看组件库-看对应分支代码
+## [npm 组件包地址](https://www.npmjs.com/package/vue-circle-progress-bar)
 
-## Project setup
+## 示例
 
-```
-npm install
-```
+![示例](https://img-blog.csdnimg.cn/6408745254394a2a986bc12ddbf47bb8.gif)
 
-### Compiles and hot-reloads for development
+## 安装
 
 ```
-npm run serve
+npm i vue-circle-progress-bar
 ```
 
-### Compiles and minifies for production
+### 使配置 在 对应的 vue 文件中引入组件和样式
 
 ```
-npm run build
+<template>
+  <div class="home">
+    <ProgressBar :pieValue="v" />
+  </div>
+</template>
+<script>
+import ProgressBar from 'vue-circle-progress-bar';
+import 'vue-circle-progress-bar/dist/vue-circle-progress-bar.css';
+export default {
+  name: "HomeView",
+  components: {
+    ProgressBar,
+  },
+  data() {
+    return {
+      v: 30,
+    };
+  },
+};
+</script>
 ```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-```
-// 登陆
-npm login
-// 发布
-npm publish
-
-// 自动更改版本号，并且 commit
-// npm version xxx
-
-// 控制台会返回下一个小版本号 如 v1.0.1
-npm version patch
-
-// 重新发布
-npm publish
-
-// patch：补丁号，修复 bug，小变动，如 v1.0.0->v1.0.1
-npm version patch
-
-// minor：次版本号，增加新功能，如 v1.0.0->v1.1.0
-npm version minor
-
-// major：主版本号，不兼容的修改，如 v1.0.0->v2.0.0
-npm version major
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).

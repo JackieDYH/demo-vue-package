@@ -1,14 +1,32 @@
 {
-  "name": "demo",
+  "name": "vue-circle-progress-bar",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/vue-circle-progress-bar.umd.min.js",
+  "keywords": [
+    "circle",
+    "progress",
+    "vue"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackieDYH/demo-vue-package"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "JackieDYH",
+    "github": "https://github.com/JackieDYH"
+  },
+  "description": "环形进度条组件",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib ./src/plugin/progress/index.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "echarts": "^5.4.2",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1"
   },
