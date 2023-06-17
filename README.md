@@ -1,6 +1,8 @@
 # vue2-circular-progress-bar 环形进度条组件
 
-## [npm 组件包地址](https://www.npmjs.com/package/vue2-circle-progress-bar)
+## [npm 组件包地址 vue2 版本](https://www.npmjs.com/package/vue2-circle-progress-bar)
+
+## [npm 组件包地址 vue3 版本](https://www.npmjs.com/package/vue3x-circle-progress-bar)
 
 ## 示例
 
