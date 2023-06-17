@@ -1,6 +1,8 @@
-# vue2-circular-progress-bar 环形进度条组件
+# vue3x-circular-progress-bar 环形进度条组件
 
-## [npm 组件包地址](https://www.npmjs.com/package/vue2-circle-progress-bar)
+## [npm 组件包地址 vue2 版本](https://www.npmjs.com/package/vue2-circle-progress-bar)
+
+## [npm 组件包地址 vue3 版本](https://www.npmjs.com/package/vue3x-circle-progress-bar)
 
 ## 示例
 
@@ -9,7 +11,7 @@
 ## 安装
 
 ```
-npm i vue2-circle-progress-bar
+npm i vue3x-circle-progress-bar
 ```
 
 ### 使配置 在 对应的 vue 文件中引入组件和样式
@@ -17,22 +19,20 @@ npm i vue2-circle-progress-bar
 ```
 <template>
   <div class="home">
-    <ProgressBar :pieValue="v" />
+    <img alt="Vue logo" src="../assets/logo.png" @click="increment" />
+    <ProgressBar :pieValue="state.count" />
   </div>
 </template>
-<script>
-import ProgressBar from 'vue2-circle-progress-bar';
-import 'vue2-circle-progress-bar/dist/vue2-circle-progress-bar.css';
-export default {
-  name: "HomeView",
-  components: {
-    ProgressBar,
-  },
-  data() {
-    return {
-      v: 30,
-    };
-  },
-};
+
+<script setup>
+import ProgressBar from "vue3x-circle-progress-bar";
+import "vue3x-circle-progress-bar/dist/vue3x-circle-progress-bar.css";
+import { reactive } from "vue";
+
+const state = reactive({ count: 0 });
+
+function increment() {
+  state.count++;
+}
 </script>
 ```

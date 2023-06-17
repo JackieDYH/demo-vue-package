@@ -1,8 +1,8 @@
 {
-  "name": "vue2-circle-progress-bar",
-  "version": "0.1.1",
+  "name": "vue3x-circle-progress-bar",
+  "version": "0.1.0",
   "private": false,
-  "main": "dist/vue2-circle-progress-bar.umd.min.js",
+  "main": "dist/vue3x-circle-progress-bar.umd.min.js",
   "keywords": [
     "circle",
     "progress",
@@ -17,7 +17,7 @@
     "name": "JackieDYH",
     "github": "https://github.com/JackieDYH"
   },
-  "description": "环形进度条组件",
+  "description": "vue3版本环形进度条组件",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -27,8 +27,8 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "echarts": "^5.4.2",
-    "vue": "^2.6.14",
-    "vue-router": "^3.5.1"
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -43,7 +43,6 @@
     "eslint-plugin-vue": "^8.0.3",
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
-    "sass-loader": "^12.0.0",
-    "vue-template-compiler": "^2.6.14"
+    "sass-loader": "^12.0.0"
   }
 }

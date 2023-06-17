@@ -1,40 +1,29 @@
 <!--
  * @Author: Jackie
- * @Date: 2023-06-06 13:58:58
- * @LastEditTime: 2023-06-15 11:25:23
+ * @Date: 2023-06-17 10:54:29
+ * @LastEditTime: 2023-06-17 11:34:39
  * @LastEditors: Jackie
  * @Description: file content
- * @FilePath: /demo-vue-package/src/views/HomeView.vue
+ * @FilePath: /vue3-demo/src/views/HomeView.vue
  * @version: 
 -->
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-    <ProgressBar :pieValue="v" />
+    <img alt="Vue logo" src="../assets/logo.png" @click="increment" />
+    <ProgressBar :pieValue="state.count" />
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
+<script setup>
 import ProgressBar from "../plugin/progress";
-export default {
-  name: "HomeView",
-  components: {
-    // HelloWorld,
-    ProgressBar,
-  },
-  data() {
-    return {
-      v: 30,
-    };
-  },
-};
-</script>
-<style lang="scss" scoped>
-.bar {
-  width: 200px;
-  height: 200px;
+import { reactive } from "vue";
+
+const state = reactive({ count: 0 });
+
+function increment() {
+  state.count++;
 }
-</style>
+
+// import ProgressBar from "vue2-circle-progress-bar";
+// import "vue2-circle-progress-bar/dist/vue2-circle-progress-bar.css";
+</script>
