@@ -1,11 +1,11 @@
 {
-  "name": "vue3x-circle-progress-bar",
-  "version": "0.1.0",
+  "name": "vue3-global-eventbus",
+  "version": "0.1.2",
   "private": false,
-  "main": "dist/vue3x-circle-progress-bar.umd.min.js",
+  "main": "dist/@jackiehao/vue3-global-eventbus.umd.min.js",
   "keywords": [
-    "circle",
-    "progress",
+    "event-bus",
+    "vue3-EventBus",
     "vue"
   ],
   "repository": {
@@ -17,16 +17,15 @@
     "name": "JackieDYH",
     "github": "https://github.com/JackieDYH"
   },
-  "description": "vue3版本环形进度条组件",
+  "description": "vue3版本eventBus全局事件总线",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib ./src/plugin/progress/index.js"
+    "lib": "vue-cli-service build --target lib ./src/plugin/eventBus/index.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "echarts": "^5.4.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

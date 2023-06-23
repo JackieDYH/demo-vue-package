@@ -1,29 +1,38 @@
 <!--
  * @Author: Jackie
  * @Date: 2023-06-17 10:54:29
- * @LastEditTime: 2023-06-17 11:34:39
+ * @LastEditTime: 2023-06-23 12:51:19
  * @LastEditors: Jackie
  * @Description: file content
- * @FilePath: /vue3-demo/src/views/HomeView.vue
+ * @FilePath: /demo-vue-package/src/views/HomeView.vue
  * @version: 
 -->
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" @click="increment" />
-    <ProgressBar :pieValue="state.count" />
+    <button @click="sk">触发事件</button>
   </div>
 </template>
 
 <script setup>
-import ProgressBar from "../plugin/progress";
-import { reactive } from "vue";
-
-const state = reactive({ count: 0 });
-
-function increment() {
-  state.count++;
+import { reactive, inject,onMounted,onBeforeUnmount } from "vue";
+const $bus = inject("$bus");
+const sk=()=>{
+  $bus.emit("ButtonSetup",123);
 }
 
-// import ProgressBar from "vue2-circle-progress-bar";
-// import "vue2-circle-progress-bar/dist/vue2-circle-progress-bar.css";
+onMounted(() => {
+  console.log(`the component is now mounted.`)
+  $bus.on('ButtonSetup',(h)=>{
+    console.log('this ButtonSetup',h);
+  })
+})
+
+onBeforeUnmount(()=>{
+  console.log('the component is now un-mounted.')
+  $bus.off('ButtonSetup')
+})
+
+
+
 </script>
